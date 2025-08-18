@@ -37,9 +37,9 @@ export function Hero() {
                   View Portfolio
                   <ArrowDown className="ml-2 h-4 w-4" />
                 </Button>
-                <Button size="lg" variant="outline" className="glass-card text-white border-white/30 hover:bg-white/10 transition-smooth hover:scale-105" onClick={() => document.getElementById('contact')?.scrollIntoView({
+                <Button size="lg" variant="outline" onClick={() => document.getElementById('contact')?.scrollIntoView({
                 behavior: 'smooth'
-              })}>
+              })} className="glass-card border-white/30 hover:bg-white/10 transition-smooth hover:scale-105 text-violet-600">
                   Contact Me
                   <Mail className="ml-2 h-4 w-4" />
                 </Button>

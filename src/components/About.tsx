@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Download, GraduationCap, Briefcase, User } from "lucide-react";
-
 export function About() {
-  return (
-    <section id="about" className="py-24 bg-background">
+  return <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -81,7 +79,9 @@ export function About() {
                       <p className="text-muted-foreground">
                         Frontend & Backend Development, Design Systems
                       </p>
-                      <p className="text-sm text-muted-foreground">2023 - Present</p>
+                      <p className="text-sm text-muted-foreground">4+ projects in various domains
+
+                    </p>
                     </div>
                   </div>
                 </CardContent>
@@ -90,6 +90,5 @@ export function About() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
