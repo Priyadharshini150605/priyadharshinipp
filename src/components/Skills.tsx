@@ -114,13 +114,9 @@ export function Skills() {
 
           {/* Technology Tags */}
           <div className="text-center animate-fade-in">
-            <h3 className="text-2xl font-semibold text-foreground mb-8">Technologies I Work With</h3>
+            
             <div className="flex flex-wrap justify-center gap-3">
-              {technologies.map((tech, index) => <Badge key={tech} variant="secondary" className="px-4 py-2 text-sm glass-card transition-smooth hover:scale-105 animate-scale-in" style={{
-              animationDelay: `${index * 0.05}s`
-            }}>
-                  {tech}
-                </Badge>)}
+              {technologies.map((tech, index) => {})}
             </div>
           </div>
         </div>
