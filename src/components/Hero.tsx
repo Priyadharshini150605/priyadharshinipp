@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mail } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
-
 export function Hero() {
-  return (
-    <section id="home" className="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-white/10 float animation-delay-1000"></div>
@@ -17,9 +15,9 @@ export function Hero() {
           {/* Content */}
           <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
             <div className="animate-fade-in-up">
-              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-5xl lg:text-7xl text-white mb-6 leading-tight font-semibold">
                 Priyadharshini
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-300">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-300 font-semibold text-5xl">
                   P P
                 </span>
               </h1>
@@ -34,20 +32,15 @@ export function Hero() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-purple-700 hover:bg-white/90 transition-smooth hover:scale-105 pulse-glow"
-                  onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-                >
+                <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90 transition-smooth hover:scale-105 pulse-glow" onClick={() => document.getElementById('portfolio')?.scrollIntoView({
+                behavior: 'smooth'
+              })}>
                   View Portfolio
                   <ArrowDown className="ml-2 h-4 w-4" />
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="glass-card text-white border-white/30 hover:bg-white/10 transition-smooth hover:scale-105"
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                >
+                <Button size="lg" variant="outline" className="glass-card text-white border-white/30 hover:bg-white/10 transition-smooth hover:scale-105" onClick={() => document.getElementById('contact')?.scrollIntoView({
+                behavior: 'smooth'
+              })}>
                   Contact Me
                   <Mail className="ml-2 h-4 w-4" />
                 </Button>
@@ -59,11 +52,7 @@ export function Hero() {
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative animate-scale-in">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-card p-2 pulse-glow">
-                <img
-                  src={profilePhoto}
-                  alt="Priyadharshini P P"
-                  className="w-full h-full object-cover rounded-full"
-                />
+                <img src={profilePhoto} alt="Priyadharshini P P" className="w-full h-full object-cover rounded-full" />
               </div>
               {/* Floating badges */}
               <div className="absolute -top-4 -right-4 glass-card p-3 rounded-xl float">
@@ -83,6 +72,5 @@ export function Hero() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
