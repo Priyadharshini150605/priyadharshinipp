@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Mail } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
 export function Hero() {
   return <section id="home" className="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
       {/* Floating Elements */}
@@ -52,7 +51,7 @@ export function Hero() {
           <div className="lg:w-1/2 flex justify-center">
             <div className="relative animate-scale-in">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass-card p-2 pulse-glow">
-                <img src={profilePhoto} alt="Priyadharshini P P" className="w-full h-full object-cover rounded-full" />
+                <img src="https://i.postimg.cc/6pHSG1WB/me.jpg" alt="Priyadharshini P P" className="w-full h-full object-cover rounded-full" />
               </div>
               {/* Floating badges */}
               <div className="absolute -top-4 -right-4 glass-card p-3 rounded-xl float">
