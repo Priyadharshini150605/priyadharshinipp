@@ -60,8 +60,8 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "priyadharshini.23bsr@kongu.edu",
-      href: "mailto:priyadharshini.23bsr@kongu.edu",
+      value: "dhachuparameswaran@gmail.com",
+      href: "mailto:dhachuparameswaran@gmail.com",
       color: "text-primary",
     },
     {
@@ -84,13 +84,13 @@ export function Contact() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/in/priyadharshini-parameswaran-46753135a/",
       color: "text-blue-600",
     },
     {
       icon: Github,
       label: "GitHub",
-      href: "#",
+      href: "https://github.com/Priyadharshini150605",
       color: "text-gray-600",
     },
   ];
