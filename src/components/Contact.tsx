@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 export function Contact() {
   const { toast } = useToast();
@@ -14,15 +15,38 @@ export function Contact() {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'service_4swtqqj',
+        'template_p51wr5d',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'nSMNcMx0nXudmARWJ'
+      );
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -137,10 +161,11 @@ export function Contact() {
                     <Button 
                       type="submit" 
                       size="lg" 
-                      className="w-full bg-primary hover:bg-primary/90 transition-smooth hover:scale-105"
+                      disabled={isSubmitting}
+                      className="w-full bg-primary hover:bg-primary/90 transition-smooth hover:scale-105 disabled:opacity-50"
                     >
                       <Send className="mr-2 h-4 w-4" />
-                      Send Message
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
                 </CardContent>

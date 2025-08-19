@@ -116,7 +116,16 @@ export function Skills() {
           <div className="text-center animate-fade-in">
             
             <div className="flex flex-wrap justify-center gap-3">
-              {technologies.map((tech, index) => {})}
+              {technologies.map((tech, index) => (
+                <Badge
+                  key={tech}
+                  variant="outline"
+                  className="px-4 py-2 text-sm font-medium transition-smooth hover:scale-105 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.05}s` }}
+                >
+                  {tech}
+                </Badge>
+              ))}
             </div>
           </div>
         </div>
