@@ -24,16 +24,16 @@ export function Footer() {
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-foreground">Get In Touch</h4>
               <div className="space-y-2">
-                <p className="text-muted-foreground">priyadharshini.23bsr@kongu.edu</p>
+                <p className="text-muted-foreground">dhachuparameswaran@gmail.com</p>
                 <p className="text-muted-foreground">+91 6369584626</p>
                 <div className="flex space-x-4 mt-4">
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
+                  <a href="https://www.linkedin.com/in/priyadharshini-parameswaran-46753135a/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
                     <Linkedin className="h-5 w-5" />
                   </a>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-smooth">
+                  <a href="https://github.com/Priyadharshini150605" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
                     <Github className="h-5 w-5" />
                   </a>
-                  <a href="mailto:priyadharshini.23bsr@kongu.edu" className="text-muted-foreground hover:text-primary transition-smooth">
+                  <a href="mailto:dhachuparameswaran@gmail.com" className="text-muted-foreground hover:text-primary transition-smooth">
                     <Mail className="h-5 w-5" />
                   </a>
                 </div>
